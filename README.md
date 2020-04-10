@@ -2,13 +2,16 @@
 
 这个配置文件里有 `i3` 和 `alacritty` 的配置，但我现在在使用 [dwm](https://github.com/LogicSkky/my-dwm) 和 [st](https://github.com/LogicSkky/my-st)。  
 
-我的 `NeoVim` 配置在 [这里](https://github.com/LogicSkky/my-neovim)。
+我的 `dmenu` 的配置在 [这里](https://github.com/LogicSkky/my-dmenu)。  
+
+我的 `NeoVim` 配置在 [这里](https://github.com/LogicSkky/my-neovim)。  
 
 ## 重要的基础操作
 
 ### Ranger
 
-安装：`ranger` 和 `ueberzug`（用于预览图片）。
+安装：`ranger` 和 `ueberzug`（用于预览图片）。  
+安装：[ranger_devicons](https://github.com/alexanderjeurissen/ranger_devicons) 这个插件。  
 
 ### Fcitx
 
