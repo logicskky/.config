@@ -19,6 +19,12 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 
+export HISTFILE=~/.config/zsh/.zsh_history
+export HISTSIZE=30000
+export SAVEHIST=30000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+
 # Some alias.
 alias vim='nvim'
 alias ra='ranger'
@@ -28,6 +34,9 @@ alias s='neofetch'
 alias sudo='sudo -E'
 alias python='python2'
 alias pip='pip2'
+
+# thefuck
+eval $(thefuck --alias)
 
 # Vi mode.
 bindkey -v
