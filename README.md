@@ -15,7 +15,7 @@
         * [自动安装](#自动安装)
         * [手动安装](#手动安装)
         * [其他软件](#其他软件)
-    * [Zinit 的常用命令](#zinit-的常用命令)
+    * [（可能）常用的命令](#可能常用的命令)
 * [字体](#字体)
 * [我所安装的软件](#我所安装的软件)
 
@@ -88,7 +88,7 @@ source ~/.zinit/bin/zinit.zsh
 pip install thefuck
 ```
 
-### Zinit 的常用命令
+### （可能）常用的命令
 
 更新 `zinit`：
 
@@ -100,6 +100,12 @@ zinit self-update
 
 ```
 zinit update
+```
+
+更改 zsh 提示符 `powerlevel10k` 的主题：
+
+```
+p10k configure
 ```
 
 ## 字体

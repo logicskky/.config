@@ -9,21 +9,24 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Install plugins
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-export RANGER_LOAD_DEFAULT_RC=FALSE
-
-# Change the default editor.
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
-
+# History
 export HISTFILE=~/.config/zsh/.zsh_history
 export HISTSIZE=30000
 export SAVEHIST=30000
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
+
+# For ranger
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
+# Change the default editor.
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 
 # Some alias.
 alias vim='nvim'
@@ -37,20 +40,14 @@ alias sudo='sudo -E'
 alias python='python2'
 alias pip='pip2'
 
-# thefuck
+# For thefuck
 eval $(thefuck --alias)
 
-# Vi mode.
+# Vi mode
 bindkey -v
-bindkey -M vicmd "j" vi-backward-char
-bindkey -M vicmd "l" vi-forward-char
-bindkey -M vicmd "J" vi-beginning-of-line
+bindkey -M vicmd "H" vi-beginning-of-line
 bindkey -M vicmd "L" vi-end-of-line
-bindkey -M vicmd "i" up-line-or-history
-bindkey -M vicmd "k" down-line-or-history
 bindkey -M vicmd "u" undo
-bindkey -M vicmd "h" vi-insert
-bindkey -M vicmd "H" vi-insert-bol
 
 # function zle-line-init zle-keymap-select {
 #     RPS1="${${KEYMAP/vicmd/-- NOR --}/(main|viins)/-- INS --}"
@@ -85,7 +82,7 @@ precmd_functions+=(_fix_cursor)
 
 KEYTIMEOUT=1
 
-# About FZF.
+# For FZF
 export FZF_DEFAULT_OPTS='--bind ctrl-k:down,ctrl-i:up'
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_COMPLETION_TRIGGER='\'
@@ -93,7 +90,7 @@ export FZF_TMUX_HEIGHT='80%'
 source /home/frank/.config/zsh/key-bindings.zsh
 source /home/frank/.config/zsh/completion.zsh
 
-# Others.
+# Others
 export PATH=$PATH:/home/frank/.gem/ruby/2.7.0/bin
 export TERM_ITALICS=true
 
