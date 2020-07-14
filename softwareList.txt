@@ -11,8 +11,10 @@ autoconf
 automake
 avahi
 b43-fwcutter
+baidunetdisk-bin
 baobab
 bash-completion
+bashtop
 bastet
 bauh
 binutils
@@ -25,11 +27,13 @@ ccat
 clang
 code
 coreutils
+cowsay
 cpupower
 crda
 cronie
 cryptsetup
 dconf-editor
+deepin.com.qq.im
 deepin.com.qq.office
 device-mapper
 dhclient
@@ -57,8 +61,6 @@ fcitx-googlepinyin
 fcitx-qt5
 fcitx-rime
 fcitx-sogoupinyin
-fcitx-table-extra
-fcitx-table-other
 feh
 ffmpegthumbnailer
 figlet
@@ -135,6 +137,7 @@ gvfs-smb
 gzip
 haveged
 hexchat
+hmcl
 htop
 i3-gaps
 i3blocks
@@ -219,11 +222,11 @@ nautilus-admin
 nautilus-empty-file
 neofetch
 neovim
-nerd-fonts-complete
 nerd-fonts-noto-sans-mono
-nerd-fonts-terminus
+nerd-fonts-source-code-pro
 netctl
 netease-cloud-music
+netease-musicbox
 network-manager-applet
 networkmanager
 networkmanager-openconnect
@@ -267,6 +270,7 @@ python-ueberzug
 python2-pip
 ranger
 reiserfsprogs
+rime-double-pinyin
 rsync
 ruby
 s-nail

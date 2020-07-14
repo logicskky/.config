@@ -14,7 +14,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# History
+# History settings
 export HISTFILE=~/.config/zsh/.zsh_history
 export HISTSIZE=30000
 export SAVEHIST=30000
