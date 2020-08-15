@@ -1,14 +1,15 @@
 # 我的配置文件
 
-这个配置文件里有 `i3` 和 `alacritty` 的配置，但我现在在使用 [dwm](https://github.com/LogicSkky/my-dwm) 和 [st](https://github.com/LogicSkky/my-st)。  
+[我的 NeoVim 配置](https://github.com/logicskky/LogicVim)  
+[我的 dwm 配置](https://github.com/logicskky/dwm)  
+[我的 st 配置](https://github.com/logicskky/st)  
+[我的 dmenu 配置](https://github.com/logicskky/dmenu)  
 
-我的 `dmenu` 的配置在 [这里](https://github.com/LogicSkky/my-dmenu)。  
-
-我的 `NeoVim` 配置在 [这里](https://github.com/LogicSkky/my-neovim)。  
+---
 
 <!-- vim-markdown-toc GFM -->
 
-* [Fcitx](#fcitx)
+* [Fcitx5](#fcitx5)
 * [Ranger](#ranger)
 * [Zsh](#zsh)
     * [安装](#安装)
@@ -17,29 +18,28 @@
         * [其他软件](#其他软件)
     * [（可能）常用的命令](#可能常用的命令)
 * [字体](#字体)
-* [我所安装的软件](#我所安装的软件)
 
 <!-- vim-markdown-toc -->
 
 首先，克隆我的配置文件：
 
-```
-git clone https://github.com/LogicSkky/my-dotfiles.git
+```zsh
+git clone https://github.com/logicskky/dotfiles.git
 ```
 
-## Fcitx
+## Fcitx5
 
-安装：`fcitx`、`fcitx-im`、`fcitx-configtool`、`fcitx-rime`。
+安装：`fcitx5`、`fcitx5-chinese-addons`、`fcitx5-gtk`、`fcitx5-qt`、`fcitx5-material-color`、`fcitx5-pinyin-moegirl`、`fcitx5-pinyin-zhwiki`。
 
 在 `~/.xprofile` 中添加：
 
-```
-export QT_IM_MODULE=fcitx
-export GTK_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+```zsh
+export QT_IM_MODULE=fcitx5
+export GTK_IM_MODULE=fcitx5
+export XMODIFIERS=@im=fcitx5
 ```
 
-Fcitx 的用户需要把第一个输入法设置为 `Keyboard - layout`。
+Fcitx5 的用户需要把第一个输入法设置为 `Keyboard - layout`。
 
 ## Ranger
 
@@ -112,6 +112,3 @@ p10k configure
 
 我使用的字体为 `Source Code Pro` 和 `Nerd-Fonts`。
 
-## 我所安装的软件
-
-详见 [这里](https://github.com/LogicSkky/my-dotfiles/blob/master/softwareList.txt)。
