@@ -29,7 +29,15 @@ git clone https://github.com/logicskky/dotfiles.git
 
 ## Fcitx5
 
-安装：`fcitx5`、`fcitx5-chinese-addons`、`fcitx5-gtk`、`fcitx5-qt`、`fcitx5-material-color`、`fcitx5-pinyin-moegirl`、`fcitx5-pinyin-zhwiki`。
+安装：
+
+- `fcitx5`
+- `fcitx5-chinese-addons`
+- `fcitx5-gtk`
+- `fcitx5-qt`
+- `fcitx5-material-color`
+- `fcitx5-pinyin-moegirl`
+- `fcitx5-pinyin-zhwiki`
 
 在 `~/.xprofile` 中添加：
 
