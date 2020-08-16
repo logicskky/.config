@@ -12,10 +12,11 @@
 * [Fcitx5](#fcitx5)
 * [Ranger](#ranger)
 * [Zsh](#zsh)
-    * [安装](#安装)
-        * [自动安装](#自动安装)
-        * [手动安装](#手动安装)
-        * [其他软件](#其他软件)
+    * [需要的软件](#需要的软件)
+        * [`zinit` 自动安装](#zinit-自动安装)
+        * [`zinit` 手动安装](#zinit-手动安装)
+        * [`the_silver_searcher` 安装](#the_silver_searcher-安装)
+        * [`thefuck` 安装](#thefuck-安装)
     * [（可能）常用的命令](#可能常用的命令)
 * [字体](#字体)
 
@@ -56,17 +57,19 @@ Fcitx5 的用户需要把第一个输入法设置为 `Keyboard - layout`。
 
 ## Zsh
 
-### 安装
+### 需要的软件
 
-安装 `zinit` 这个插件管理器：
+- `zinit`
+- `the_silver_searcher`
+- `thefuck`
 
-#### 自动安装
+#### `zinit` 自动安装
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 ```
 
-#### 手动安装
+#### `zinit` 手动安装
 
 假设把 `zinit` 安装到家目录下。  
 
@@ -88,11 +91,15 @@ git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 source ~/.zinit/bin/zinit.zsh
 ```
 
-#### 其他软件
+#### `the_silver_searcher` 安装
 
-安装 `thefuck` 这个软件：
-
+```zsh
+sudo pacman -S the_silver_searcher
 ```
+
+#### `thefuck` 安装
+
+```zsh
 pip install thefuck
 ```
 
