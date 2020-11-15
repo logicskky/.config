@@ -45,12 +45,14 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init("~/.config/awesome/themes/default/theme.lua")
 
--- This is used later as the default terminal and editor to run.
-terminal = "st"
-editor = os.getenv("EDITOR") or "vim"
-editor_cmd = terminal .. " -e " .. editor
+-- This is used later as the default terminal, browser, screenshot tool and editor to run.
+terminal = "alacritty"
+browser = "firefox"
+screenshot = "flameshot gui"
+editor = "nvim"
+editor_cmd = "nvim"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -62,16 +64,16 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.floating,
     awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.max.fullscreen,
+    awful.layout.suit.floating,
     awful.layout.suit.magnifier,
     awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
@@ -91,7 +93,10 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+                                    { "Terminal", terminal },
+                                    { "Browser", browser },
+                                    { "Editor", editor_cmd },
+                                    { "Screenshot", screenshot },
                                   }
                         })
 
@@ -196,10 +201,10 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.topwibox = awful.wibar({ position = "top", screen = s, opacity = 0.8 })
 
     -- Add widgets to the wibox
-    s.mywibox:setup {
+    s.topwibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
@@ -311,8 +316,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "r",     function () awful.util.spawn_with_shell("rofi -show drun") end,
+              {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -327,6 +332,22 @@ globalkeys = gears.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
+    -- Volume
+    --awful.key({ modkey }, "XF86AudioLowerVolume",
+        --function()
+            --awful.util.spawn("amixer sset Master,0 5%-")
+            --update_volume(volume_widget)
+        --end),
+    --awful.key({ modkey }, "XF86AudioRaiseVolume",
+        --function()
+            --awful.util.spawn("amixer sset Master,0 5%+")
+            --update_volume(volume_widget)
+        --end),
+    --awful.key({ modkey }, "XF86AudioMute",
+        --function()
+            --awful.util.spawn("amixer sset Master toggle")
+            --update_volume(volume_widget)
+        --end)
 )
 
 clientkeys = gears.table.join(
@@ -490,7 +511,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -563,11 +584,13 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+-- Auto run programs.
 function run_once(prg)
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. prg .. " || (" .. prg .. ")")
 end
 run_once("picom")
 run_once("nm-applet")
 run_once("flameshot")
-os.execute("xmodmap ~/.Xmodmap")
-run_once("fcitx")
+awful.util.spawn_with_shell("xmodmap ~/.xmodmap")
+run_once("fcitx5")
+

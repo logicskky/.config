@@ -1,9 +1,10 @@
 # 我的配置文件
 
-[我的 NeoVim 配置](https://github.com/logicskky/LogicVim)  
+[我的 NeoVim 配置](https://github.com/logicskky/nvim)  
 [我的 dwm 配置](https://github.com/logicskky/dwm)  
 [我的 st 配置](https://github.com/logicskky/st)  
 [我的 dmenu 配置](https://github.com/logicskky/dmenu)  
+[我的 Emacs 配置(I am using Vim now.)](https://github.com/logicskky/.emacs.d)
 
 ---
 
