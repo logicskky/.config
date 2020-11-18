@@ -26,7 +26,7 @@
 首先，克隆我的配置文件：
 
 ```zsh
-git clone https://github.com/logicskky/dotfiles.git
+git clone https://github.com/logicskky/.config.git
 ```
 
 ## Fcitx5
@@ -126,5 +126,5 @@ p10k configure
 
 ## 字体
 
-我使用的字体为 `Source Code Pro` 和 `Nerd-Fonts`。
+我使用的字体为 `等距更纱黑体 SC` 和 `Nerd-Fonts`。
 
