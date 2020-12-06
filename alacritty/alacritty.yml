@@ -90,25 +90,25 @@ scrolling:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: 等距更纱黑体 SC
+    family: source code pro
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: 等距更纱黑体 SC
+    family: source code pro
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: 等距更纱黑体 SC
+    family: source code pro
     # Style can be specified to pick a specific face.
     # style: Italic
 
 
   # Point size
-  size: 9
+  size: 10
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
