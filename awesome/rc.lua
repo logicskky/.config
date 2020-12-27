@@ -201,7 +201,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.topwibox = awful.wibar({ position = "top", screen = s, opacity = 0.8 })
+    s.topwibox = awful.wibar({ position = "bottom", screen = s })
 
     -- Add widgets to the wibox
     s.topwibox:setup {
@@ -316,7 +316,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.util.spawn_with_shell("rofi -show drun") end,
+    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show drun") end,
               {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -586,11 +586,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Auto run programs.
 function run_once(prg)
-  awful.util.spawn_with_shell("pgrep -u $USER -x " .. prg .. " || (" .. prg .. ")")
+  awful.spawn.with_shell("pgrep -u $USER -x " .. prg .. " || (" .. prg .. ")")
 end
 run_once("picom")
 run_once("nm-applet")
 run_once("flameshot")
-awful.util.spawn_with_shell("xmodmap ~/.xmodmap")
+awful.spawn.with_shell("xmodmap ~/.xmodmap")
 run_once("fcitx5")
 
