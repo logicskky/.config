@@ -12,7 +12,7 @@ source ~/.config/zsh/histories.zsh
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/plugins.zsh
 source ~/.config/zsh/vi.zsh
-#source ~/.config/zsh/fzf.zsh
+source ~/.config/zsh/fzf.zsh
 source ~/.config/zsh/others.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
