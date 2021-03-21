@@ -23,10 +23,18 @@
 
 <!-- vim-markdown-toc -->
 
+**记得先备份本地的原配置文件！！！**  
+
 首先，克隆我的配置文件：
 
 ```zsh
-git clone https://github.com/logicskky/.config.git
+git clone git@github.com:logicskky/.config.git ~/.config
+```
+
+再，在终端下运行以下命令：
+
+```zsh
+echo "source ~/.config/zsh/init.zsh" > ~/.zshrc
 ```
 
 ## Fcitx5
@@ -54,7 +62,6 @@ Fcitx5 的用户需要把第一个输入法设置为 `Keyboard - layout`。
 ## Ranger
 
 安装：`ranger` 和 `ueberzug`（用于预览图片）。  
-安装：[ranger_devicons](https://github.com/alexanderjeurissen/ranger_devicons) 这个插件。  
 
 ## Zsh
 
@@ -83,10 +90,10 @@ mkdir ~/.zinit
 然后克隆 `zinit`：
 
 ```
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+git clone git@github.com:zdharma/zinit.git ~/.zinit/bin
 ```
 
-然后让 zsh 引用 `zinit`，在 `.zshrc` 的顶部添加（我的配置文件中已添加该行）：
+然后让 zsh 引用 `zinit`，在 `init.zsh` 的顶部添加（我的配置文件中已添加该行）：
 
 ```
 source ~/.zinit/bin/zinit.zsh

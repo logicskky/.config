@@ -5,6 +5,6 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_COMPLETION_TRIGGER='\'
 export FZF_TMUX_HEIGHT='80%'
 
-source ~/.config/zsh/key-bindings.zsh
-source ~/.config/zsh/completion.zsh
+source ~/.config/zsh/fzf-key-bindings.zsh
+source ~/.config/zsh/fzf-completion.zsh
 

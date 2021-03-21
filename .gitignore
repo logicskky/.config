@@ -1,0 +1,11 @@
+# ignore everything:
+/*
+/*/
+
+# but these:
+!/alacritty/
+!/awesome/
+!/zsh/
+/zsh/.zsh_history
+!/README.md
+!/.gitignore
